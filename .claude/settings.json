@@ -7,7 +7,8 @@
       "Bash(git config *)",
       "Bash(git remote *)",
       "Bash(py -3 -B model/wfq_v12_check.py)",
-      "Bash(git commit -m 'Add V1.1/V1.2 specs and check models; collect review docs under review/ *)"
+      "Bash(git commit -m 'Add V1.1/V1.2 specs and check models; collect review docs under review/ *)",
+      "Bash(git commit -m 'Add Stage 1 RTL, testbenches, regression scripts, and coding style docs *)"
     ]
   }
 }

@@ -1,0 +1,11 @@
+rtl/wfq_matcher16.v
+rtl/wfq_reset_sync.v
+rtl/wfq_trie_upper_regs.v
+rtl/wfq_sync_ram_1rw.v
+rtl/wfq_sync_ram_1r1w.v
+rtl/wfq_init_ctrl.v
+rtl/wfq_trie_search.v
+rtl/wfq_metadata_update.v
+rtl/wfq_translation_table.v
+rtl/wfq_tag_refcount_array.v
+rtl/wfq_key_metadata.v
