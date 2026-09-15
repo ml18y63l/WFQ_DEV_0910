@@ -2,7 +2,12 @@
   "permissions": {
     "allow": [
       "Bash(git --version)",
-      "Bash(git init *)"
+      "Bash(git init *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git config *)",
+      "Bash(git remote *)",
+      "Bash(py -3 -B model/wfq_v12_check.py)",
+      "Bash(git commit -m 'Add V1.1/V1.2 specs and check models; collect review docs under review/ *)"
     ]
   }
 }
