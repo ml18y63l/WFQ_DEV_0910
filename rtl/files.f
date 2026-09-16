@@ -9,3 +9,11 @@ rtl/wfq_metadata_update.v
 rtl/wfq_translation_table.v
 rtl/wfq_tag_refcount_array.v
 rtl/wfq_key_metadata.v
+rtl/wfq_admission_ctrl.v
+rtl/wfq_response_fifo.v
+rtl/wfq_free_slot_stack.v
+rtl/wfq_epoch_ctrl.v
+rtl/wfq_resource_ctrl.v
+rtl/wfq_commit_ctrl.v
+rtl/wfq_list_manager.v
+rtl/wfq_tag_sort_engine.v
