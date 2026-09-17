@@ -146,6 +146,14 @@ def main():
                 elapsed = cached["seconds"]
             output = log.read_text(encoding="utf-8")
             message, metrics = parse_output(output, case["top"])
+            for parameter, field in [("PTR_WIDTH", "ptr"), ("MEM_DEPTH", "depth"),
+                                     ("FLOW_ID_WIDTH", "flow"), ("RUN_MODE", "mode")]:
+                if parameter in case["parameters"] and metrics.get(field) != case["parameters"][parameter]:
+                    raise RuntimeError(label + " reported a different " + parameter)
+            if case["group"] == "long":
+                expected_seed = int(next(arg.split("=", 1)[1] for arg in case["plusargs"] if arg.startswith("+SEED=")))
+                if metrics.get("seed") != expected_seed:
+                    raise RuntimeError(label + " did not use the requested random seed")
             if case["group"] == "long" and metrics.get("random_accepts", 0) < args.accepted:
                 raise RuntimeError(label + " did not reach accepted-operation target")
             if case["group"] == "directed" and metrics.get("sequences") != 28:
